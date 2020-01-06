@@ -1,6 +1,6 @@
 <template>
     <div class="Movie">
-        <img alt="Avengers Poster" :src="require(`@/assets/${ImageLoc}`)"/>
+        <img v-if="ImageLoc" alt="Avengers Poster" :src="ImageLoc"/>
         <h1>{{MovieTitle}}</h1>
         <p class="description">
             {{MovieDescription}}
@@ -21,18 +21,14 @@ export default {
 
 <style scoped>
 .Movie {
-    background-color: #2c2c50;
-    color: white;
+    background-color: lightgray;
     position: relative;
     display: float;
     float: left;
-    border-radius: 25px;
-    margin: 10px
+    
 }
 img {
     max-width: 400px;
-    /* min-width: 400px; */
     max-height: 400px;
-    /* min-height: 400px; */
 }
 </style>

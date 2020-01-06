@@ -1,56 +1,54 @@
 <template>
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+    <!-- <Movie
+      MovieTitle="Avengers: Endgame"
+      MovieDescription="This is an amazing movie, go watch it!"
+      ImageLoc="AvengersEndgame.png"
+    />-->
     <div v-for="(movie, index) in movies" :key="index">
       <Movie
-      :MovieTitle="movie.title"
-      :MovieDescription="movie.description"
-      :ImageLoc="movie.image"
-    />
+        :MovieTitle="movie.name"
+        :MovieDescription="movie.description"
+        :ImageLoc="movie.imageUrl"
+      />
     </div>
-    
   </div>
 </template>
 
 <script>
 import Movie from "./components/Movie.vue";
+import axios from "axios";
 export default {
   name: "app",
   data: () => ({
-      movies: [
-        {
-          title: "Avengers: Endgame",
-          description: "This is an amazing movie, go watch it!",
-          image: "AvengersEndgame.png"
-        },
-        {
-          title: "Star Wars",
-          description: "The OG Star Wars",
-          image: "StarWars.png"
-        },
-        {
-          title: "Atomic Blonde",
-          description: "The CIA always wins",
-          image: "AtomicBlonde.png"
-        }
-      ]
+    movies: []
   }),
   components: {
     Movie
+  },
+  mounted: function() {
+    setTimeout(async()=>{
+      var res = await axios.get("https://api.forcemx.com/v1/movies");
+      if(res.data.length > 0){
+        res.data.forEach(element => {
+          // console.log(element);
+          this.$data.movies.push(element);
+        });
+      }
+    });  
   }
 };
 </script>
 
 <style>
-html body {
-  background-color: #2c3e50;
-}
 #app {
   font-family: "Lucida Console", Monaco, monospace;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  color: #2c3e50;
   margin-top: 60px;
 }
 </style>
