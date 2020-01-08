@@ -32,11 +32,16 @@ export default {
       var res = await axios.get("https://api.forcemx.com/v1/movies");
       if(res.data.length > 0){
         res.data.forEach(element => {
-          // console.log(element);
+          console.log(element);
           this.$data.movies.push(element);
         });
       }
     });  
+  },
+  methods: {
+    new_movie: function(movieName, MovieDescription, ImageLink) {
+      console.log(movieName);
+    }
   }
 };
 
