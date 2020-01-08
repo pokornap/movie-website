@@ -21,7 +21,8 @@ export default {
 
 <style scoped>
 .Movie {
-    background-color: lightgray;
+    background-color: #2c3e50;
+    color: white;
     position: relative;
     display: float;
     float: left;

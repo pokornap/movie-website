@@ -38,16 +38,19 @@ export default {
       }
     });  
   },
-  methods: {
-    new_movie: function(movieName, MovieDescription, ImageLink) {
-      console.log(movieName);
-    }
-  }
+  // methods: {
+  //   new_movie: function(movieName, MovieDescription, ImageLink) {
+  //     console.log(movieName);
+  //   }
+  // }
 };
 
 </script>
 
 <style>
+html body {
+  background-color: #2c2c50;
+}
 #app {
   font-family: "Lucida Console", Monaco, monospace;
   font-size: 16px;
