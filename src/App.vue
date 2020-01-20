@@ -56,6 +56,7 @@ export default {
 
 <style>
 html body {
+  margin: 0px;
   background-color: #57557c;
 }
 #app {
