@@ -1,6 +1,8 @@
 <template>
     <div class="Movie">
-        <img v-if="ImageLoc" alt="Avengers Poster" :src="ImageLoc"/>
+        <div id="movie-bg">
+            <img v-if="ImageLoc" alt="Movie Poster" :src="ImageLoc"/>
+        </div>
         <h1>{{MovieTitle}}</h1>
         <p class="description">
             {{MovieDescription}}
@@ -21,15 +23,25 @@ export default {
 
 <style scoped>
 .Movie {
-    background-color: #2c3e50;
+    background-color: #2c2c50;
     color: white;
     position: relative;
     display: float;
     float: left;
-    
+    max-width: 400px;
+    margin-right: 16px;
+    border-radius: 10px;
+}
+#movie-bg {
+    background-color: white;
+    width: 400px;
+    max-height: 400px;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
 }
 img {
     max-width: 400px;
     max-height: 400px;
+    
 }
 </style>
