@@ -7,9 +7,9 @@
       ImageLoc="AvengersEndgame.png"
     />-->
     <div>
-      <Nav>
+      <TopBar>
 
-      </Nav>
+      </TopBar>
     </div>
     <div id="movie-display" v-for="(movie, index) in movies" :key="index">
       <Movie
@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import Nav from "./components/Nav.vue";
+import TopBar from "./components/TopBar.vue";
 import Movie from "./components/Movie.vue";
 import axios from "axios";
 export default {
@@ -32,7 +32,7 @@ export default {
   }),
   components: {
     Movie,
-    Nav
+    TopBar
   },
   mounted: function() {
     setTimeout(async()=>{
