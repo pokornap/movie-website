@@ -29,7 +29,7 @@ export default {
     display: float;
     float: left;
     max-width: 400px;
-    margin-right: 16px;
+    margin: 8px;
     border-radius: 10px;
 }
 #movie-bg {
