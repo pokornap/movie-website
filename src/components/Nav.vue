@@ -15,16 +15,17 @@ export default {
 <style scoped>
 
 .nav {
-    color: white;
-    background-color: #2c2c50;
     height: 75px;
-    float: "both";
-    clear: "both";
+    float: both;
+    clear: both;
     padding-top: 5px;
     padding-left: 15px;
     margin-bottom: 25px;
+    color: white;
+    background-color: #2c2c50;
     text-align: left;    
 }
+
 
 
 
