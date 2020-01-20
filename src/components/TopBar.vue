@@ -1,12 +1,12 @@
 <template>
-    <div class="nav">
+    <div class="TopBar">
         <h1>This is the nav bar</h1>
     </div>    
 </template>
 
 <script >
 export default {
-    name: "nav",
+    name: "TopBar",
     props: {},
 
 }
@@ -14,7 +14,7 @@ export default {
 
 <style scoped>
 
-.nav {
+.TopBar {
     height: 75px;
     float: both;
     clear: both;
