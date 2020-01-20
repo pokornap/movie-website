@@ -20,7 +20,6 @@ export default {
     clear: both;
     padding-top: 5px;
     padding-left: 15px;
-    margin-bottom: 25px;
     color: white;
     background-color: #2c2c50;
     text-align: left;    

@@ -11,7 +11,7 @@
 
       </Nav>
     </div>
-    <div v-for="(movie, index) in movies" :key="index">
+    <div id="movie-display" v-for="(movie, index) in movies" :key="index">
       <Movie
         :MovieTitle="movie.name"
         :MovieDescription="movie.description"
@@ -66,6 +66,10 @@ html body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
+#movie-display {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
 </style>
