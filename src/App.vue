@@ -46,8 +46,8 @@ export default {
     });  
   },
   // methods: {
-  //   new_movie: function(movieName, MovieDescription, ImageLink) {
-  //     console.log(movieName);
+  //   showModal: function() {
+  //     ;
   //   }
   // }
 };
