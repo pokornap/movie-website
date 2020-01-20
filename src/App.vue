@@ -6,6 +6,11 @@
       MovieDescription="This is an amazing movie, go watch it!"
       ImageLoc="AvengersEndgame.png"
     />-->
+    <div>
+      <Nav>
+
+      </Nav>
+    </div>
     <div v-for="(movie, index) in movies" :key="index">
       <Movie
         :MovieTitle="movie.name"
@@ -17,6 +22,7 @@
 </template>
 
 <script>
+import Nav from "./components/Nav.vue";
 import Movie from "./components/Movie.vue";
 import axios from "axios";
 export default {
@@ -25,11 +31,12 @@ export default {
     movies: []
   }),
   components: {
-    Movie
+    Movie,
+    Nav
   },
   mounted: function() {
     setTimeout(async()=>{
-      var res = await axios.get("https://api.forcemx.com/v1/movies");
+      var res = await axios.get("https://api.forcemx.com/colts/movie");
       if(res.data.length > 0){
         res.data.forEach(element => {
           console.log(element);
@@ -49,7 +56,7 @@ export default {
 
 <style>
 html body {
-  background-color: #2c2c50;
+  background-color: #57557c;
 }
 #app {
   font-family: "Lucida Console", Monaco, monospace;

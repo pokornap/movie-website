@@ -1,14 +1,13 @@
 <template>
     <div class="nav">
-        <button>Add Movie</button>
+        <h1>This is the nav bar</h1>
     </div>    
 </template>
 
 <script >
 export default {
     name: "nav",
-    props: 
-
+    props: {},
 
 }
 </script>
@@ -16,7 +15,15 @@ export default {
 <style scoped>
 
 .nav {
-    background-color: #2c3e50
+    color: white;
+    background-color: #2c2c50;
+    height: 75px;
+    float: "both";
+    clear: "both";
+    padding-top: 5px;
+    padding-left: 15px;
+    margin-bottom: 25px;
+    text-align: left;    
 }
 
 
